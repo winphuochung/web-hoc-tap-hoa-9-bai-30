@@ -135,7 +135,7 @@ ngay, không cần chỉnh sửa.
   /* ---------- Bố cục ---------- */
   .layout{max-width:1480px; margin:0 auto; display:flex; gap:1.8rem; padding:1.5rem 1.4rem 6.5rem; align-items:flex-start}
   .sidenav{
-    position:sticky; top:76px; width:258px; flex:0 0 258px;
+    position:sticky; top:129px; width:258px; flex:0 0 258px;
     background:color-mix(in srgb, var(--card) 84%, transparent);
     -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
     border:1px solid color-mix(in srgb, var(--line) 75%, transparent);
@@ -196,7 +196,7 @@ ngay, không cần chỉnh sửa.
     background:color-mix(in srgb, var(--card) 94%, transparent); border-radius:24px;
     border:1px solid color-mix(in srgb, var(--line) 80%, transparent);
     box-shadow:0 12px 30px rgba(0,70,120,.11);
-    padding:1.7rem 1.9rem 1.9rem; scroll-margin-top:84px;
+    padding:1.7rem 1.9rem 1.9rem; scroll-margin-top:129px;
   }
   .sec-head{display:flex; align-items:center; gap:.8rem; margin-bottom:.85rem; padding-bottom:.7rem; border-bottom:1.5px solid var(--line)}
   .sec-num{
@@ -1341,7 +1341,7 @@ function enterApp(){
   document.getElementById("bestScore").textContent = bestScore === null ? "—" : bestScore + "/10";
   answers = new Array(QUESTIONS.length).fill(-1);
   quizSubmitted = false;
-  buildQuiz();
+   scoreSent = false; quizStartTime = null;buildQuiz();
   updateAnswered();
   var banner = document.getElementById("scoreBanner");
   banner.className = "score-banner"; banner.textContent = "";
